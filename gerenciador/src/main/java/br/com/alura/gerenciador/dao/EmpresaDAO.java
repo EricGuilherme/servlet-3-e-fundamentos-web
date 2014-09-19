@@ -10,7 +10,7 @@ import br.com.alura.gerenciador.Empresa;
 
 public class EmpresaDAO {
 
-	private final static Map<Long, Empresa> EMPRESAS = new HashMap<>();
+	private final static Map<Long, Empresa> EMPRESAS = new HashMap<Long, Empresa>();
 	static {
 		geraIdEAdiciona(new Empresa("Doceria Bela Vista"));
 		geraIdEAdiciona(new Empresa("Ferragens Docel"));
@@ -24,7 +24,7 @@ public class EmpresaDAO {
 		if (nome == null)
 			return EMPRESAS.values();
 		
-		List<Empresa> similares = new ArrayList<>();
+		List<Empresa> similares = new ArrayList<Empresa>();
 		for (Empresa empresa : EMPRESAS.values()) {
 			if (empresa.getNome().toLowerCase().contains(nome.toLowerCase()))
 				similares.add(empresa);

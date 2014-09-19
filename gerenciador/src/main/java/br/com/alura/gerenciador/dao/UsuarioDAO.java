@@ -7,10 +7,9 @@ import br.com.alura.gerenciador.Usuario;
 
 public class UsuarioDAO {
 
-	private final static Map<String, Usuario> USUARIOS = new HashMap<>();
+	private final static Map<String, Usuario> USUARIOS = new HashMap<String, Usuario>();
 	static {
-		USUARIOS.put("guilherme.silveira@alura.com.br", new Usuario("guilherme.silveira@alura.com.br","silveira"));
-		USUARIOS.put("rodrigo.turini@alura.com.br", new Usuario("rodrigo.turini@alura.com.br","turini"));
+		USUARIOS.put("eric.guilherme@bluesoft.com.br", new Usuario("eric.guilherme@bluesoft.com.br","umdoistres"));
 	}
 
 	public Usuario buscaPorEmailESenha(String email, String senha) {
@@ -23,5 +22,4 @@ public class UsuarioDAO {
 		
 		return null;
 	}
-
 }
